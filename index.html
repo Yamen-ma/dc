@@ -101,6 +101,14 @@ background: #073057;
             text-align: left;
             margin-top: 20px;
         }
+        .sep{
+            color:#091a3e;
+            padding:20px;
+            border: 3px #10e26f double;
+            background-color: #ffffff;
+            padding: 0;
+            text-align: center;
+font-size: 18px;        }
         .highlight {
 background: #22c327;
 background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45, 0.42) 100%)!important;      }
@@ -133,16 +141,12 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
         <table id="interactiveTable">
             <tbody>
             <tr >
-                <td style="color: #f2536d;border:2px #f7a452 double" class="cen">Partial refund
+                <td style="color: #cb93ff;border:2px #f7a452 double" class="cen">Partial refund
     </td>
-                <td style="color: #f2536d;border:2px #f7a452 double" class="cen" colspan="2">Cancel order
+                <td style="color: #cb93ff;border:2px #f7a452 double" class="cen" colspan="2">Cancel order
     </td>
     </tr>
-    <tr>
-<td style="color: #f2536d;border:2px #f7a452 double" class="cen">accepted because merchant sent clear evidence</td>
-    <td style="color: #f2536d;border:2px #f7a452 double" class="cen">rejected because merch did not send clear evidence</td>
-        <td style="color: #f2536d;border:2px #f7a452 double" class="cen">Appeal for meal loss compensation </td>
-</tr>
+   
 
 
             </tr>
@@ -153,7 +157,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     <div class="content active" id="content-0">
        <table id="interactiveTable">
         <tbody>
-            <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Missing items</th></tr>
+            <tr><th class="sep" colspan=2 class="cen">Missing items</th></tr>
         <tr>
             <td class="yellow">
                 missing item // unable to contact merchant // unable to judge // inclusive responsibility
@@ -194,7 +198,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                 missing items // cx sent photo that show the issue // merchant said that the rider forgot to pick up the items // rider responsibility
             </td>
         </tr>
-        <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Wrong items</th></tr>
+        <tr><th class="sep" colspan=2 class="cen">Wrong items</th></tr>
         <tr>
             <td class="green">
                 wrong items // cx sent invalid photo // customer responsibility
@@ -233,7 +237,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     <div class="content" id="content-1">
         <table id="interactiveTable">
             <tbody>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Bad taste</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">Bad taste</th></tr>
                 <tr>
                     <td class="green">
                         bad taste // cx sent an invalid photo // customer responsibility
@@ -254,7 +258,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                         bad taste // cx sent photo that show the issue // merchant responsibility
                     </td>
                 </tr>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Cold food</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">Cold food</th></tr>
                 <tr>
                     <td class="green">
                         cold food // cx did not sent evidence // customer responsibility
@@ -291,7 +295,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                         cold food // cx sent a photo that show the issue // ETA was not expired by the rider // order ETA was expired // Platform responsibility
                     </td>
                 </tr>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">order spillage</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">order spillage</th></tr>
                 <tr>
                     <td class="green">
                         order spillage // cx sent invalid photo // customer responsibility
@@ -318,7 +322,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     <div class="content" id="content-2">
         <table id="interactiveTable">
             <tbody>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Foreign objects</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">Foreign objects</th></tr>
     
                 <tr>
                     <td class="yellow">
@@ -345,7 +349,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                         Foreign objects //  merchant accepts responsibility // <u>Platform</u>-merchant responsibility
                     </td>
                 </tr>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Wrong order</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">Wrong order</th></tr>
 
                 <tr>
                     <td class="yellow">
@@ -387,22 +391,48 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
         <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
     </div>
     <div class="content" id="content-3">
+        <table id="interactiveTable">
+            <tbody>
+        <tr>
+            <td style="color: #53f26e;border:2px #f7a452 double" class="cen">accepted because merchant sent clear evidence</td>
+                <td style="color: #fc4444;border:2px #f7a452 double" class="cen">rejected because merch did not send clear evidence</td>
+                    <td style="color: #e7f253;border:2px #f7a452 double" class="cen">Appeal for meal loss compensation </td>
+            </tr>
+            </tbody>
+            </table>
        <table id="interactiveTable">
         <tbody>
-            <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Foreign objects</th></tr>
-                  </tbody>
-    </table>
+            <tr><th class="sep" colspan=2 class="cen">Appeal rejection</th></tr>
+                   <tr>
+                    <td>
+                        عزيزي تاجر كيتا
 
-    <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
-    <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
-    <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
-    <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
-    <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
+شكرا لاختيارك كيتا.
+ نحن نقدر ملاحظاتك بخصوص المشكلة التي أبلغت عنها فيما يتعلق بطلب الاعتراض.
+نحن نقدر حقا سعة صدرك حيث قمنا بالتحقيق الشامل في الأمر والتحقق منه. بعد الانتهاء من مراجعتنا، حددنا أفضل مسار للعمل
+نعتذر منك جدا لكن تم رفض طلب الاعتراض الخاص بهذا الطلب (0000)
+
+بسبب انه لم يتم تقديم دليل انه تم تحضير الطلب كامل وبشكل صحيح والعميل قام بتزويدنا بصورة توضح المشكلة
+في حال واجهت اي مشكلة يمكنك التواصل معنا اي وقت عن طريق البريد الالكتروني او المحادثة او الخط الساخن وسنقوم بمساعدتك على مدار الساعة
+
+شكرا لك مرة أخرى على ملاحظاتك القيمة. نأمل أن نستمر في خدمتك ونثق في أنك ستستمر في دعم كيتا.
+شكراً لتواصلك مع خدمة عملاء كيتا.
+
+نتمنى لك يوماً سعيد.
+
+أطيب التحيات،
+فريق خدمة عملاء كيتا
+                    </td>
+
+                  </tr>
+        </tbody>
+                 
+    </table>
     </div>
     <div class="content" id="content-4">
         <table id="interactiveTable">
             <tbody>
-                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Missing items</th></tr>
+                <tr><th class="sep" colspan=2 class="cen">Missing items</th></tr>
                
                       </tbody>
          </table>
