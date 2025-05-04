@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Keeta Scripts And Solutions jw_yamenalmanasra</title>
     <style>
@@ -57,17 +57,17 @@ background: #091a3e;
             margin: 5px 0;
         }
         .tab {
-            color: #a9c4fd;
+            color: #7ce6ee;
             display: inline-block;
             padding: 10px 5px;
-            background-color: #242424;
+            background-color: #14264d;
             border: 1px solid #535353;
             margin: 0;
             cursor: pointer;
             transition: background-color 0.3s ease-out;
         }
         .tab:hover, .tab.active {
-            background-color: #444;
+            background-color: #445680;
             color: #FFD700;
         }
         .content {
@@ -88,7 +88,7 @@ background: #091a3e;
             border-radius: 5px;
             padding: 7px;
             text-align: left;
-            background-color: #052746;
+            background-color: #0f2a44;
         }
         td:hover {
 background: #073057;
@@ -98,7 +98,7 @@ background: #073057;
         .copied {
             color: #fff;
             font-size: 14px;
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
         }
         .highlight {
@@ -124,24 +124,24 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
 <body>
     <div class="max-width">
     <div class="tab-container">
-        <div class="tab active" onclick="showContent(0)">Missing items</div>
-        <div class="tab" onclick="showContent(1)">Wrong itmes</div>
-        <div class="tab" onclick="showContent(2)">Order spillage</div>
-        <div class="tab" onclick="showContent(3)">Bad taste/Cold food</div>
-        <div class="tab" onclick="showContent(4)">Wrong order</div>
+        <div class="tab active" onclick="showContent(0)">Missing items-Wrong itmes</div>
+        <div class="tab" onclick="showContent(1)">Bad-Cold-spillage</div>
+        <div class="tab" onclick="showContent(2)">Foreign-Wrong order</div>
+        <div class="tab" onclick="showContent(3)">Merchant Appeal</div>
+        <div class="tab" onclick="showContent(4)">Normal cases</div>
         <br>
         <table id="interactiveTable">
             <tbody>
             <tr >
-                <td style="color: #5DE2E7;border:2px #FFD700 double" class="cen">Partial refund
+                <td style="color: #f2536d;border:2px #f7a452 double" class="cen">Partial refund
     </td>
-                <td style="color: #5DE2E7;border:2px #FFD700 double" class="cen" colspan="2">Cancel order
+                <td style="color: #f2536d;border:2px #f7a452 double" class="cen" colspan="2">Cancel order
     </td>
     </tr>
     <tr>
-<td style="color: #5DE2E7;border:2px #FFD700 double" class="cen">accepted because merchant sent clear evidence</td>
-    <td style="color: #5DE2E7;border:2px #FFD700 double" class="cen">rejected because merch did not send clear evidence</td>
-        <td style="color: #5DE2E7;border:2px #FFD700 double" class="cen">Appeal for meal loss compensation </td>
+<td style="color: #f2536d;border:2px #f7a452 double" class="cen">accepted because merchant sent clear evidence</td>
+    <td style="color: #f2536d;border:2px #f7a452 double" class="cen">rejected because merch did not send clear evidence</td>
+        <td style="color: #f2536d;border:2px #f7a452 double" class="cen">Appeal for meal loss compensation </td>
 </tr>
 
 
@@ -153,6 +153,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     <div class="content active" id="content-0">
        <table id="interactiveTable">
         <tbody>
+            <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Missing items</th></tr>
         <tr>
             <td class="yellow">
                 missing item // unable to contact merchant // unable to judge // inclusive responsibility
@@ -193,9 +194,36 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                 missing items // cx sent photo that show the issue // merchant said that the rider forgot to pick up the items // rider responsibility
             </td>
         </tr>
+        <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Wrong items</th></tr>
+        <tr>
+            <td class="green">
+                wrong items // cx sent invalid photo // customer responsibility
+            </td>
+        </tr>
+        <tr>
+            <td class="green">
+                wrong items // cx sent photo// the photo did not show the issue // customer responsibility
+            </td>
+        </tr>
+        <tr>
+            <td class="red">
+                wrong items // cx sent a photo that show the issue // merchant responsibility
+            </td>
+        </tr>
+        <tr>
+            <td class="red">
+                wrong items // cx sent a photo that show the issue // <u>Platform</u>-merchant responsibility
+            </td>
+        </tr>
               </tbody>
     </table>
-    <div class="copied"><span>Copyright © 2025 Keeta Scripts And Solutions. All Rights Reserved . Yamen Al-Manasrah
+    <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
+    <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
+    <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
+    <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
+    <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
+
+    <div class="copied cen"><span>Copyright © 2025 Keeta Scripts And Solutions. All Rights Reserved . Yamen Al-Manasrah
 
 
     </span>
@@ -205,124 +233,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     <div class="content" id="content-1">
         <table id="interactiveTable">
             <tbody>
-                    <td class="green">
-                        wrong items // cx sent invalid photo // customer responsibility
-                    </td>
-                </tr>
-                <tr>
-                    <td class="green">
-                        wrong items // cx sent photo// the photo did not show the issue // customer responsibility
-                    </td>
-                </tr>
-                <tr>
-                    <td class="red">
-                        wrong items // cx sent a photo that show the issue // merchant responsibility
-                    </td>
-                </tr>
-                <tr>
-                    <td class="red">
-                        wrong items // cx sent a photo that show the issue // <u>Platform</u>-merchant responsibility
-                    </td>
-                </tr>
-                      </tbody>
-        </table>
-    <div class="copied" id="copiedMessage"></div>
-
-    </div>
-    <div class="content" id="content-2">
-        <table id="interactiveTable">
-            <tbody>
-                <tr>
-                    <td class="green">
-                        order spillage // cx sent invalid photo // customer responsibility
-                    </td>
-                </tr>
-                <tr>
-                    <td class="green">
-                        order spillage // cx sent photo // the rider photo did not show any spillage // customer responsibility
-                    </td>
-                </tr>
-                <tr>
-                    <td class="blue">
-                        order spillage // cx sent a photo that show the issue // rider photo did not prove // rider responsibility
-                    </td>
-                </tr>
-                
-            
-                      </tbody>
-        </table>
-
-    <div class="copied" id="copiedMessage"></div>
-
-    </div>
-    <div class="content" id="content-3">
-       <table id="interactiveTable">
-        <tbody>
-            <tr>
-                <td class="green">
-                    bad taste // cx sent an invalid photo // customer responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="green">
-                    bad taste // cx sent photo // the photo did not show the issue (Subjective feelings)// customer responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="green">
-                    bad taste // cx has red or purple tags // customer responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="red">
-                    bad taste // cx sent photo that show the issue // merchant responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="green">
-                    cold food // cx did not sent evidence // customer responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="green">
-                    cold food // cx sent photo // the photo did not show the issue // ETA was not expired //customer responsibility
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="green">
-                    cold food // cx has red or purple tags // customer responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="red">
-                    cold food // cx sent a photo that show the issue // ETA was not expired by the rider // merchant responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="red">
-                    cold food // cx sent a photo that show the issue // ETA was not expired by the rider // <u>Platform</u>-merchant responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="blue">
-                    cold food // cx sent a photo that show the issue // ETA was expired by the rider // rider responsibility
-                </td>
-            </tr>
-            <tr>
-                <td class="white">
-                    cold food // cx sent a photo that show the issue // ETA was not expired by the rider // order ETA was expired // Platform responsibility
-                </td>
-            </tr>
-                  </tbody>
-    </table>
-
-    <div class="copied" id="copiedMessage"></div>
-
-    </div>
-    <div class="content" id="content-4">
-        <table id="interactiveTable">
-            <tbody>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Bad taste</th></tr>
                 <tr>
                     <td class="green">
                         bad taste // cx sent an invalid photo // customer responsibility
@@ -343,6 +254,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                         bad taste // cx sent photo that show the issue // merchant responsibility
                     </td>
                 </tr>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Cold food</th></tr>
                 <tr>
                     <td class="green">
                         cold food // cx did not sent evidence // customer responsibility
@@ -379,9 +291,126 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                         cold food // cx sent a photo that show the issue // ETA was not expired by the rider // order ETA was expired // Platform responsibility
                     </td>
                 </tr>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">order spillage</th></tr>
+                <tr>
+                    <td class="green">
+                        order spillage // cx sent invalid photo // customer responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td class="green">
+                        order spillage // cx sent photo // the rider photo did not show any spillage // customer responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td class="blue">
+                        order spillage // cx sent a photo that show the issue // rider photo did not prove // rider responsibility
+                    </td>
+                </tr>
+                      </tbody>
+        </table>
+        <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
+        <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
+        <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
+        <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
+        <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
+    </div>
+    <div class="content" id="content-2">
+        <table id="interactiveTable">
+            <tbody>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Foreign objects</th></tr>
+    
+                <tr>
+                    <td class="yellow">
+                        Foreign objects // unable to contact merchant // unable to judge // inclusive responsibility  
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="yellow">
+                        Foreign objects // customer photo clera and accurate // merchant does not accept responsibility // unable to judge // inclusive responsibility  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="green">
+                        Foreign objects // invlaid photo //customer responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">
+                        Foreign objects //  merchant accepts responsibility // merchant responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">
+                        Foreign objects //  merchant accepts responsibility // <u>Platform</u>-merchant responsibility
+                    </td>
+                </tr>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Wrong order</th></tr>
+
+                <tr>
+                    <td class="yellow">
+                        Wrong order // cx photo does not clarify whether the rider made an error or the merchant did // rider didnt answer // unable to judge // inclusive responsibility  
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="green">
+                        Wrong order // cx photo invalid // Customer responsibility  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="blue">
+                        Wrong order // cx photo shows clear evidence that the rider delivered the wrong item // rider responsibility  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="blue">
+                        Wrong order // rider admits to the mistake // rider responsibility  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">
+                        Wrong order // cx photo shows clear evidence that the merchant made the wrong item // merchant responsibility  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">
+                        Wrong order // cx photo shows clear evidence that the merchant made the wrong item // <u>Platform</u>-merchant responsibility  
+                    </td>
+                </tr>
+                      </tbody>
+        </table>
+
+        <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
+        <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
+        <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
+        <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
+        <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
+    </div>
+    <div class="content" id="content-3">
+       <table id="interactiveTable">
+        <tbody>
+            <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Foreign objects</th></tr>
+                  </tbody>
+    </table>
+
+    <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
+    <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
+    <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
+    <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
+    <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
+    </div>
+    <div class="content" id="content-4">
+        <table id="interactiveTable">
+            <tbody>
+                <tr><th style="color:#7dffc9;padding:20px;border: 3px #7dffc9 double;padding: 0;"colspan=2 class="cen">Missing items</th></tr>
+               
                       </tbody>
          </table>
-  
+         <div class="copied"><span class="yellow" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;inclusive/inadmissible responsibility</span></div>
+         <div class="copied"><span class="green" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Customer responsibility</span></div>
+         <div class="copied"><span class="red" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Merchant responsibility</span></div>
+         <div class="copied"><span class="blue" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Rider responsibility</span></div>
+         <div class="copied"><span class="white" style="font-size:18px;"><i class="fa fa-square fa-2x " style="position: relative; top: 10px;"></i>&nbsp;&nbsp;Platform responsibility</span></div>
      </div>
     <div class="copied" id="copiedMessage"></div>
     <div class="copied" id="copiedMessage"></div>
