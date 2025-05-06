@@ -114,14 +114,13 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
 .sub-tabs {
     display: flex;
     justify-content: center;
-    background-color: #333;
 }
 
 .sub-tab-button {
     padding: 20px;
     color: white;
-    background-color: #333;
-    border: none;
+    background-color: #073057;
+    border-bottom: 3px inset white;
     cursor: pointer;
     font-size: 16px;
     flex: 1;
@@ -129,7 +128,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
 }
 
 .sub-tab-button:hover {
-    background-color: #555;
+    background-color: #1d5181;
 }
 
 .sub-tab-content {
@@ -137,7 +136,11 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
     height: calc(100vh - 60px); /* Adjust height based on sub-tab button size */
     overflow: auto;
 }
-
+.active-2{
+    background-color: #4c456b;
+    color: white;
+    font-weight: bold;
+}
 #subTab1 {
 }
 
@@ -214,7 +217,7 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
         </tr>
         <tr>
             <td class="green">
-                missing items // merchant merchant didnt accept responsibility // the delivery image show all if the order // customer responsibility
+                missing items // merchant didnt accept responsibility // the delivery image show all if the order // customer responsibility
             </td>
         </tr>
         <tr>
@@ -516,9 +519,8 @@ Best regards,
                            <tr>
                             <td class="ar">
                                 عزيزي عميل كيتا،
-                                <br/><br/>
                                 نشكرك على اختيار كيتا. 
-                                <br/>
+                                <br/><br/>
                                 نحن نقدر ملاحظاتك التي تفيد (.....) ؛ ونعتذر بصدق عن التجربة السيئة التي مررت بها.
                                 ولكن نظرًا لعدم تزويدنا برقم الطلب الذي حصل فيه الخطأ نرجو التواصل معنا عبر الدردشة المباشرة وتزويدنا بكامل المعلومات المطلوبة لكي يتم مساعدتك على اكمل وجه ممكن.
                                 نشكرك مرة أخرى على ملاحظاتك القيمة.
@@ -598,32 +600,37 @@ Best regards,
     if (activeSubTab) {
         activeSubTab.style.display = 'block';
     }
+
+    // Handle active button highlighting
+    const allButtons = document.querySelectorAll('.sub-nav button');
+    allButtons.forEach(button => button.classList.remove('active'));
+
+    const activeButton = document.querySelector(`button[data-tab="${subTabId}"]`);
+    if (activeButton) {
+        activeButton.classList.add('active-2');
+    }
 }
 
 // Initially show the first sub-tab
 showSubTab('subTab1');
 
+// Add functionality for click-to-copy
+document.body.addEventListener('click', (event) => {
+    if (event.target.tagName === 'TD') {
+        navigator.clipboard.writeText(event.target.innerText)
+            .then(() => {
+                event.target.classList.add('highlight');
 
-        // Add functionality for click-to-copy
-        document.body.addEventListener('click', (event) => {
-            if (event.target.tagName === 'TD') {
-                navigator.clipboard.writeText(event.target.innerText)
-                    .then(() => {
-                        // Add highlight to the clicked cell
-                        event.target.classList.add('highlight');
+                copiedMessage.innerText = "Copied: " + event.target.innerText;
 
-                        // Display a copied message
-                        copiedMessage.innerText = "Copied: " + event.target.innerText;
-
-                        // Remove highlight and message after a short delay
-                        setTimeout(() => {
-                            event.target.classList.remove('highlight');
-                            copiedMessage.innerText = "";
-                        }, 600);
-                    })
-                    .catch(err => alert("Failed to copy: " + err));
-            }
-        });
+                setTimeout(() => {
+                    event.target.classList.remove('highlight');
+                    copiedMessage.innerText = "";
+                }, 600);
+            })
+            .catch(err => alert("Failed to copy: " + err));
+    }
+});
     </script>
 </body>
 </html>
