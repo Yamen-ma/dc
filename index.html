@@ -111,6 +111,41 @@ font-size: 18px;        }
         .highlight {
 background: #22c327;
 background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45, 0.42) 100%)!important;      }
+.sub-tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.sub-tab-button {
+    padding: 20px;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.sub-tab-button:hover {
+    background-color: #555;
+}
+
+.sub-tab-content {
+    display: none;
+    height: calc(100vh - 60px); /* Adjust height based on sub-tab button size */
+    overflow: auto;
+}
+
+#subTab1 {
+}
+
+#subTab2 {
+}
+
+#subTab3 {
+}
         .red{
             color: rgb(252, 120, 120) !important;
         }
@@ -261,6 +296,11 @@ background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45
                 <tr>
                     <td class="red">
                         bad taste // cx sent photo that show the issue // merchant responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">
+                        bad taste // cx sent photo that show the issue // <u>Platform</u>-merchant responsibility
                     </td>
                 </tr>
                 <tr><th class="sep" colspan=2 class="cen">Cold food</th></tr>
@@ -460,11 +500,71 @@ Best regards,
             <tbody>
                 <tr>
                     <td style="color: #53f26e;border:2px #f7a452 double" class="cen">insufficient information//email informing him to contact support team</td>
-                    <td style="color: #fc4444;border:2px #f7a452 double" class="cen">rejected because merch did not send clear evidence</td>
-                    <td style="color: #e7f253;border:2px #f7a452 double" class="cen">Appeal for meal loss compensation </td>
                 </tr>
             </tbody>
         </table>
+        <div class="sub-tabs">
+            <button class="sub-tab-button" onclick="showSubTab('subTab1')">Customer E-mails</button>
+            <button class="sub-tab-button" onclick="showSubTab('subTab2')">Rider E-mails</button>
+            <button class="sub-tab-button" onclick="showSubTab('subTab3')">Merchant E-mails</button>
+        </div>
+    
+        <div class="sub-tab-content" id="subTab1">
+            <table id="interactiveTable">
+                <tbody>
+                    <tr><th class="sep" colspan=2 class="cen">invalid E-mail(No order number)</th></tr>
+                           <tr>
+                            <td class="ar">
+                                عزيزي عميل كيتا،
+                                <br/><br/>
+                                نشكرك على اختيار كيتا. 
+                                <br/>
+                                نحن نقدر ملاحظاتك التي تفيد (.....) ؛ ونعتذر بصدق عن التجربة السيئة التي مررت بها.
+                                ولكن نظرًا لعدم تزويدنا برقم الطلب الذي حصل فيه الخطأ نرجو التواصل معنا عبر الدردشة المباشرة وتزويدنا بكامل المعلومات المطلوبة لكي يتم مساعدتك على اكمل وجه ممكن.
+                                نشكرك مرة أخرى على ملاحظاتك القيمة.
+                                <br/><br/>
+                                نأمل أن نستمر في خدمتك ونثق في أنك ستستمر في دعم كيتا.
+                                <br/>
+                                شكراً لتواصلك مع خدمة عملاء كيتا.
+                                <br/>
+                                راح نكون شاكرين لو تقدر تأخذ لحظة لتقييم خدمتنا. شكراً لتعاونك، ونتمنى لك يوماً سعيد.
+                                <br/><br/>
+                                مع أطيب التحيات،
+                                ​​​​​​​ فريق خدمة عملاء كيتا.
+                            </td>
+        
+                          </tr>
+                          <tr>
+                            <td>
+                                Dear Keeta Customer, thank you for choosing Keeta
+                                <br/><br/>
+                                We appreciate your feedback regarding the issue you reported and hope that you will provide us with more details such as your order number and the issue so that we can assist you in the best possible way.
+                                <br/>
+                                We truly appreciate your patience, and we are here to serve you. You can contact us via live chat or via email.
+                                <br/>
+                                Thank you again for your valuable input.
+                                <br/><br/>
+                                We hope to continue to serve you and trust that you will continue to support Keeta.
+                                I wish you and all the best in the future.
+                                Thank you for contacting Keeta customer service. We appreciate it if you could take a moment to rate our service.
+                                Have a great day!
+                                <br/><br/>
+                                Best regards,
+                                Keeta Customer Service Team.
+                            </td>
+                          </tr>
+                </tbody>
+                         
+            </table>
+        </div>
+        <div class="sub-tab-content" id="subTab2">
+            <h1>Sub Tab 2 Content</h1>
+            <p>This is the content for Sub Tab 2.</p>
+        </div>
+        <div class="sub-tab-content" id="subTab3">
+            <h1>Sub Tab 3 Content</h1>
+            <p>This is the content for Sub Tab 3.</p>
+        </div>
      </div>
     <div class="copied" id="copiedMessage"></div>
     <div class="copied" id="copiedMessage"></div>
@@ -488,6 +588,21 @@ Best regards,
                 contents[i].classList.toggle('active', i === index);
             });
         }
+        function showSubTab(subTabId) {
+    const allSubTabs = document.querySelectorAll('.sub-tab-content');
+    allSubTabs.forEach(subTab => {
+        subTab.style.display = 'none';
+    });
+
+    const activeSubTab = document.getElementById(subTabId);
+    if (activeSubTab) {
+        activeSubTab.style.display = 'block';
+    }
+}
+
+// Initially show the first sub-tab
+showSubTab('subTab1');
+
 
         // Add functionality for click-to-copy
         document.body.addEventListener('click', (event) => {
