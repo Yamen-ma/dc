@@ -54,17 +54,18 @@ background: #091a3e;
             transform: translateY(0);
         }
         .tab-container {
-            margin: 5px 0;
+            margin: 0px 0;
         }
         .tab {
-            color: #7ce6ee;
+            color: #a4f9ff;
             display: inline-block;
-            padding: 10px 5px;
+            padding: 10px 2px;
             background-color: #14264d;
-            border: 1px solid #535353;
+            box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 0;
             cursor: pointer;
             transition: background-color 0.3s ease-out;
+            font-size: 0.82em;
         }
         .tab:hover, .tab.active {
             background-color: #445680;
@@ -77,21 +78,22 @@ background: #091a3e;
             display: block;
         }
         table {
-            border-spacing: 5px;
+            border-spacing: 5px 1rem;
             margin: 0;
             border-collapse: separate;
             width: 100%;
             color: #EAEAEA;
         }
         th, td {
-           border: 0.13em solid #898789;
             border-radius: 5px;
-            padding: 7px;
+            padding: 8px;
             text-align: left;
-            background-color: #0f2a44;
+            background-color: #103150;
+            box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
         }
         td:hover {
-background: #073057;
+            background: #073057;
             color: #FFD700;
             cursor: pointer;
         }
@@ -103,14 +105,15 @@ background: #073057;
         }
         .sep{
             background-color: #091a3e;
-            color:#cf95ff;
+            color:#fcf8ff;
             padding:20px;
             border: none;
             padding: 0 7px;
+            border-bottom: 3px solid #fcf8ff;
+            border-radius: 0%;
 font-size: 18px;        }
         .highlight {
-background: #22c327;
-background: linear-gradient(273deg, rgba(34, 195, 39, 0.38) 0%, rgba(83, 253, 45, 0.42) 100%)!important;      }
+        border :1px solid #64ff69 !important;}
 .sub-tabs {
     display: flex;
     justify-content: center;
